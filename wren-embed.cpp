@@ -37,4 +37,10 @@ namespace WrenEmbed {
 
         return readFile(fileName);
     }
+    
+    void initWrenConfig(WrenConfiguration& p_config) {
+        p_config.writeFn = wrenWrite;
+        p_config.errorFn = wrenError;
+        p_config.loadModuleFn = loadModule;
+    }
 }
